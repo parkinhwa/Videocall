@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Broadcast</string>
+    <string name="title_activity_broadcast" />
+    <string name="title_activity_watch" />
+</resources>
