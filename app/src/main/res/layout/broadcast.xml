@@ -70,6 +70,14 @@
                 android:text="끊기"
                 android:enabled="false"
                 android:backgroundTint="@color/colorPrimaryDark"/>
+            <Button
+                android:id="@+id/btnPhoto"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="촬영"
+                android:backgroundTint="@color/colorPrimaryDark"/>
 
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout

@@ -77,6 +77,8 @@ class watchActivity : AppCompatActivity() {
 
             binding.btnConnect.isEnabled = false
             binding.btnClose.isEnabled = true
+
+
         }
 
         // 종료 버튼 클릭시 RemonCall 의 close() 메쏘드를 호출합니다.
@@ -217,7 +219,7 @@ class watchActivity : AppCompatActivity() {
     private fun changeConstraints(isConnected: Boolean) {
         constraintSet?.clone(defaultConstraintSet)
 
-        // 연결되지 않은 경우에는 로컬을 크게 보여주고, 연결되면 activity_main.xml 설정으로 보여준다.
+        // 연결되지 않은 경우
         if (!isConnected) {
             // 로컬 레이아웃 사이즈 constraint 등록
             constraintSet?.constrainWidth(R.id.layoutRemote, ConstraintSet.MATCH_CONSTRAINT)
@@ -249,7 +251,6 @@ class watchActivity : AppCompatActivity() {
                 ConstraintSet.BOTTOM,
                 0
             )
-            Snackbar.make(binding.rootLayout, "상대 채널이 켜지지 않았습니다.", Snackbar.LENGTH_SHORT).show()
         }
 
     }

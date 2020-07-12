@@ -1,6 +1,7 @@
 package com.example.broadcast
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -19,6 +20,7 @@ import com.remotemonster.sdk.RemonCall
 import com.remotemonster.sdk.RemonException
 import com.remotemonster.sdk.data.CloseType
 
+
 // 가장 단순한 형태의 P2P 통화에 대한 샘플입니다.
 class broadcastActivity : AppCompatActivity() {
     private val REMON_PERMISSION_REQUEST = 0x0101
@@ -32,7 +34,7 @@ class broadcastActivity : AppCompatActivity() {
     private var constraintSet: ConstraintSet? = null
     private var defaultConstraintSet: ConstraintSet? = null
 
-    // 기타
+
     private lateinit var inputMethodManager:InputMethodManager
 
     private var latestError:RemonException? = null
@@ -73,7 +75,6 @@ class broadcastActivity : AppCompatActivity() {
 
             // RemonCall 연결
             remonCall?.connect(binding.etChannelName.text.toString())
-
             binding.btnConnect.isEnabled = false
             binding.btnClose.isEnabled = true
         }
@@ -113,7 +114,7 @@ class broadcastActivity : AppCompatActivity() {
             .videoCodec("VP8")
             .videoWidth(640)
             .videoHeight( 480 )
-            .localView( binding.surfRendererLocal )
+            .localView( binding.surfRendererLocal)
             .build()
 
         // SDK 의 이벤트 콜백을 정의합니다.
@@ -133,6 +134,7 @@ class broadcastActivity : AppCompatActivity() {
         remonCall?.onConnect { id: String ->
             Snackbar.make( binding.rootLayout, "채널($id)에 연결되었습니다.", Snackbar.LENGTH_SHORT).show()
             updateView(false)
+
         }
 
 
@@ -197,7 +199,12 @@ class broadcastActivity : AppCompatActivity() {
         } else {
             binding.layoutMessage.visibility = View.GONE
         }
-    }
+
+        if(isConnected) {
+            val Intent = Intent(this, PhotoActivity::class.java)
+            startActivity(Intent)
+        }
+ 6   }
 
 
 
@@ -266,4 +273,5 @@ class broadcastActivity : AppCompatActivity() {
         return px.toInt()
 
     }
+
 }
