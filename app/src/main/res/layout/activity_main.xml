@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <SurfaceView
+                    android:id="@+id/surfaceViewLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_height="52dp"
+        android:text="SimpleCall"
+        android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:id="@+id/llChannelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CHANNEL"
+                android:textSize="17sp"
+               />
+
+            <EditText
+                android:id="@+id/etChannelName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:paddingStart="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="연결"
+            android:backgroundTint="@color/colorPrimaryDark"/>
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="끊기"
+            android:enabled="false"
+            android:backgroundTint="@color/colorPrimaryDark"/>
+
+        <ImageButton
+            android:id="@+id/btnPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@android:drawable/ic_menu_camera"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
