@@ -19,6 +19,10 @@ import com.google.android.material.snackbar.Snackbar
 import com.remotemonster.sdk.RemonCall
 import com.remotemonster.sdk.RemonException
 import com.remotemonster.sdk.data.CloseType
+<<<<<<< HEAD
+=======
+import org.webrtc.SurfaceViewRenderer
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
 
 // 가장 단순한 형태의 P2P 통화에 대한 샘플입니다.
 class watchActivity : AppCompatActivity() {

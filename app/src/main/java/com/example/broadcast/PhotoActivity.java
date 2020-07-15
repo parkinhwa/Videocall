@@ -49,6 +49,10 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
@@ -103,7 +107,11 @@ public class PhotoActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
         mSurfaceView = findViewById(R.id.surfRendererLocal);
+=======
+        mSurfaceView = findViewById(R.id.surfaceView);
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mMagnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
@@ -114,6 +122,7 @@ public class PhotoActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
     @Override
     protected void onResume() {
         super.onResume();
@@ -129,6 +138,8 @@ public class PhotoActivity extends AppCompatActivity {
         mSensorManager.unregisterListener(deviceOrientation.getEventListener());
     }
 
+=======
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
     public void initSurfaceView() {
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -436,4 +447,7 @@ public class PhotoActivity extends AppCompatActivity {
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d

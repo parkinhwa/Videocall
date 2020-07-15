@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.broadcast.broadcastActivity">
+=======
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.broadcast.broadcastActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+        <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/surfRendererLocal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
 
     <LinearLayout
         android:id="@+id/rootLayout"
@@ -52,7 +72,11 @@
 
             <Button
                 android:id="@+id/btnConnect"
+<<<<<<< HEAD
                 android:layout_width="120dp"
+=======
+                android:layout_width="100dp"
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
                 android:layout_height="50dp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
@@ -62,7 +86,11 @@
 
             <Button
                 android:id="@+id/btnClose"
+<<<<<<< HEAD
                 android:layout_width="120dp"
+=======
+                android:layout_width="100dp"
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
                 android:layout_height="50dp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
@@ -72,13 +100,18 @@
                 android:backgroundTint="@color/colorPrimaryDark"/>
             <Button
                 android:id="@+id/btnPhoto"
+<<<<<<< HEAD
                 android:layout_width="120dp"
+=======
+                android:layout_width="100dp"
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
                 android:layout_height="50dp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:text="촬영"
                 android:backgroundTint="@color/colorPrimaryDark"/>
 
+<<<<<<< HEAD
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -144,3 +177,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </layout>
+=======
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="카메라"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+>>>>>>> a31e77a347a4a993e36794e55de66658b938306d
